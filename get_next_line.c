@@ -6,7 +6,7 @@
 /*   By: albertmantaras <albertmantaras@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 21:10:38 by albertmanta       #+#    #+#             */
-/*   Updated: 2022/02/18 01:22:58 by albertmanta      ###   ########.fr       */
+/*   Updated: 2022/05/26 00:58:17 by albertmanta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*read_file(int fd, char *statica)
 	if (!str)
 		return (NULL);
 	read_bytes = 1;
-	while (!ft_strchr(statica, '\n') && read_bytes != 0)
+	while (!ft_strchr_gnl(statica, '\n') && read_bytes != 0)
 	{
 		read_bytes = read(fd, str, BUFFER_SIZE);
 		if (read_bytes == -1)
@@ -30,7 +30,7 @@ char	*read_file(int fd, char *statica)
 			return (NULL);
 		}
 		str[read_bytes] = '\0';
-		statica = ft_strjoin(statica, str);
+		statica = ft_strjoin_gnl(statica, str);
 	}
 	free (str);
 	return (statica);
@@ -80,7 +80,7 @@ char	*ftgetstatic(char *arg1)
 		free (arg1);
 		return (NULL);
 	}
-	size = ft_strlen(arg1);
+	size = ft_strlen_gnl(arg1);
 	size = size - i;
 	str = malloc(sizeof(char) * (size + 1));
 	if (!str)

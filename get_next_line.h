@@ -6,7 +6,7 @@
 /*   By: albertmantaras <albertmantaras@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 21:10:32 by albertmanta       #+#    #+#             */
-/*   Updated: 2022/02/18 01:14:08 by albertmanta      ###   ########.fr       */
+/*   Updated: 2022/05/26 00:58:30 by albertmanta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@
 
 char	*get_next_line(int fd);
 //Utils para nuestra funcion
-char	*ft_strchr(char *s, int c);
-size_t	ft_strlen(char *s);
-char	*ft_strjoin(char *left_str, char *buff);
+char	*ft_strchr_gnl(char *s, int c);
+size_t	ft_strlen_gnl(char *s);
+char	*ft_strjoin_gnl(char *left_str, char *buff);
 
 #endif
