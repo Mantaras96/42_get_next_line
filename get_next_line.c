@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albertmantaras <albertmantaras@student.    +#+  +:+       +#+        */
+/*   By: amantara <amantara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 21:10:38 by albertmanta       #+#    #+#             */
-/*   Updated: 2022/05/26 00:58:17 by albertmanta      ###   ########.fr       */
+/*   Updated: 2022/05/27 17:02:26 by amantara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,9 +101,8 @@ char	*get_next_line(int fd)
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
 	temp = read_file(fd, temp);
-	if(!temp) {
+	if (!temp)
 		return (NULL);
-	}
 	line = ftgetline(temp);
 	temp = ftgetstatic(temp);
 	return (line);
